@@ -3,13 +3,13 @@ Theme Name: Memak
 Theme URI: https://github.com/mrmakadia94/memak
 Author: Meet Makadia
 Author URI: https://profiles.wordpress.org/immeet94/
-Description: Memak is a super minimal theme, both front end and back end. adding no bloat whatesover. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
+Description: Memak is a minimal theme, both front end and back end.
 Requires at least: WordPress 4.0
-Version: 1.0.1
+Version: 1.0.4
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: memak
-Tags: one-column, custom-menu, threaded-comments
+Tags: one-column
 
 This theme, like WordPress, is licensed under the GPL.
 */
@@ -534,7 +534,7 @@ header nav ul li a {
 article {
   background: transparent;
   padding: 0;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   border-bottom: 10px solid #3C3C3C;
 }
 article .title {
@@ -816,3 +816,62 @@ header nav ul li.active a{
 header nav ul li a:hover{
   color: #e1e1e1;
 }
+a.comment-edit-link{
+  color: #ffffff;
+}
+.comment-metadata a{
+  color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+  display: block;
+  float: left;
+  width: calc(100% - 200px);
+}
+
+
+
+.main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+    background-color: #3C3C3C;
+    text-align: center;
+}
+
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+.main-navigation li {
+  float: left;
+  position: relative;
+}
+
+.main-navigation a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+

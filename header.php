@@ -32,12 +32,19 @@
 		</div><!--/ author -->
 		
 		<div id="brand">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></a> </h1>
+			<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html(get_bloginfo('name', 'display')); ?>" rel="home"><?php echo esc_html(get_bloginfo('name')); ?></a>
+			</h1>
 		</div><!-- /brand -->
 	
-		<nav role="navigation" class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
+		<nav id="site-navigation" class="main-navigation">
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
 		
 		<div class="clear"></div>
 	</div><!--/container -->

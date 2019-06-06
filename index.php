@@ -16,8 +16,8 @@
 					<article class="post">
 					
 						<h1 class="title">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<?php the_title() ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+								<?php the_title_attribute(); ?>
 							</a>
 						</h1>
 						<div class="post-meta">
@@ -99,7 +99,8 @@
 						<div class="meta clearfix">
 							<div class="category"><?php the_category(); ?></div>
 							<div class="tags"><?php the_tags( '| &nbsp;', '&nbsp;' ); ?></div>
-						</div><!-- Meta -->						
+						</div><!-- Meta -->
+					
 						
 					</article>
 
@@ -145,6 +146,16 @@
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
 						
+						<div class="post-meta">
+							<?php
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+							?>
+							<?php comment_form(); ?>
+						</div><!--/post-meta -->
+
 					</article>
 
 				<?php endwhile; ?>

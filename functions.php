@@ -71,13 +71,6 @@ if ( ! function_exists( 'memak_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'memak_setup' );
 
-// Define the version as a constant so we can easily replace it throughout the theme
-add_theme_support( 'title-tag' );
-/*-----------------------------------------------------------------------------------*/
-/* Add Rss to Head
-/*-----------------------------------------------------------------------------------*/
-add_theme_support( 'automatic-feed-links' );
-
 /*-----------------------------------------------------------------------------------*/
 /* Add Content width
 /*-----------------------------------------------------------------------------------*/
@@ -102,8 +95,9 @@ function memak_scripts()  {
     if (!is_admin()) {
         wp_register_style('memak-Arvo', 'https://fonts.googleapis.com/css?family=Roboto+Slab|ZCOOL+XiaoWei', array(), null, 'all');
         wp_enqueue_style('memak-Arvo');
-    }
-	wp_enqueue_style( 'memak-style', get_template_directory_uri() . '/style.css', '10000', 'all' );
+    }	
+	wp_enqueue_style( 'memak-style', get_stylesheet_uri() );
+	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -124,9 +118,9 @@ function memak_pingback_header() {
 }
 add_action( 'wp_head', 'memak_pingback_header' );
 
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+add_filter('nav_menu_css_class' , 'memak_special_nav_class' , 10 , 2);
 
-function special_nav_class ($classes, $item) {
+function memak_special_nav_class ($classes, $item) {
     if (in_array('current-menu-item', $classes) ){
         $classes[] = 'active ';
     }

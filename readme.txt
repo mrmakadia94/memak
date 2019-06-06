@@ -7,19 +7,20 @@ Author URI: https://profiles.wordpress.org/immeet94/
 Requires PHP: 5.6
 Requires at least: WordPress 4.0
 Tested up to: WordPress 5.1.1
-Stable tag: 1.0.1
-Description: Memak is a super minimal theme, both front end and back end. adding no bloat whatesover. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
+Stable tag: 1.0.4
+Description: Memak is a minimal theme, both front end and back end.
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: one-column, custom-menu, threaded-comments
+Tags: one-column
 Text Domain: memak
 
 == Description ==
 
 A simple minimal WordPress theme built with only what is needed to survive
 
-Memak is a super minimal theme, both front end and back end. adding no bloat whatesover. It only uses the minimum requirements that WordPress has, a stylesheet, screenshot and the index page.
-Memak is modefied version that works with WordPress 5.
+Memak is a minimal theme, both front end and back end.
+
+Memak is modified version that works with WordPress 5.
 
 == Installation ==
 
@@ -33,10 +34,16 @@ Memak Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 1.1 =
+= 1.0.3 =
+* inc folder added.
+
+= 1.0.2 =
+* All RECOMMENDED Result follow in Theme
+
+= 1.0.1 =
 * All RECOMMENDED Result follow in Theme  
 
-= 1.0 =
+= 1.0.0 =
 * Initial release
 
 == Resources ==
